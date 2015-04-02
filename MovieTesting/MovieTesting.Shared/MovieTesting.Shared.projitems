@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>225aad11-90c0-43d8-8258-f1a21ca045e1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MovieTesting</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Movie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LocalStorageService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MovieCachingService.cs" />
+  </ItemGroup>
+</Project>
